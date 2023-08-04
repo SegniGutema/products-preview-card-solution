@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  /* background colors for containers */
+  --bgc-1: hsl(30, 38%, 92%);
+  --bgc-2: hsl(0, 0%, 100%);
+  /* background colors for elements */
+  --button-color: hsl(158, 36%, 37%);
+  --button-color-hovered: hsl(212, 21%, 14%);
+  --text-color: hsl(228, 12%, 48%);
+  /* fontweight(fw) */
+  --fw-large: 700;
+  --fw-small: 500;
+  /* font-size(fs)  */
+  --fs-large: 1.7rem;
+  --fs-small: 1rem;
+}
+body {
+  background-color: var(--bgc-1);
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  padding: 1.5rem 1rem;
+  width: 100vw;
+  height: 100vh;
+}
+main {
+  background-color: var(--bgc-2);
+  border-radius: 10px;
+  max-width: 300px;
+  height: 95%;
+  margin-inline: auto;
+}
+#section-1 {
+  width: 100%;
+  height: 30%;
+}
+.product-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+}
+#section-2 {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  height: auto;
+}
+#section-2 * {
+  margin-bottom: 1rem;
+}
+.product-type {
+  font-weight: var(--fw-small);
+  color: var(--text-color);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 7px;
+}
+.header {
+  margin-top: -7px;
+}
+.header,
+.current-price {
+  font-family: "Fraunces";
+  font-size: var(--fs-large);
+  font-weight: var(--fw-large);
+}
+.description,
+.product-type,
+.former-price {
+  font-size: var(--fs-small);
+  font-family: "Montserrat";
+  color: var(--text-color);
+}
+.price {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+button {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  height: 2.5rem;
+  margin-top: -15px;
+  background-color: var(--button-color);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  column-gap: 10px;
+  font-size: 1rem;
+}
+button:hover {
+  background-color: var(--button-color-hovered);
+  opacity: 70%;
+}
+footer {
+  position: absolute;
+  bottom: 1rem;
+  text-align: center;
+}
+footer a {
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+@media (min-width: 649px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #container {
+    max-width: 600px;
+    max-height: 370px;
+    display: flex;
+  }
+  #section-1 {
+    height: 100%;
+    width: 50%;
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: cover;
+  }
+  .product-image {
+    /* height: 100%;
+    object-fit: fill; */
+    display: none;
+  }
+  #section-2 {
+    height: 100%;
+    width: 50%;
+  }
+  button {
+    width: 80%;
+    margin-inline: auto;
+  }
+}
